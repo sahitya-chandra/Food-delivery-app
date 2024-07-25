@@ -1,0 +1,4 @@
+/* Chrome, Safari, Edge, and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
