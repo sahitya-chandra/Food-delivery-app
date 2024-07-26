@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home"
 import Cart from "./pages/Cart/Cart"
 import PlaceOrder from "./pages/PlaceOrder/Placeorder"
 import StoreContextProvider from "./context/StoreContext"
+import Footer from "./components/Footer/Footer"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/order" element={<PlaceOrder />}/>
           </Routes>
         </div>
+        <Footer />
       </StoreContextProvider>
     </BrowserRouter>
   )
