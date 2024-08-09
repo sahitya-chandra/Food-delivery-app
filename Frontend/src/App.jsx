@@ -5,15 +5,20 @@ import Cart from "./pages/Cart/Cart"
 import PlaceOrder from "./pages/PlaceOrder/Placeorder"
 import StoreContextProvider from "./context/StoreContext"
 import Footer from "./components/Footer/Footer"
+import { useState } from "react"
+import LoginPopup from "./components/LoginPopup/LoginPopup"
 
 
 function App() {
+
+  const [showlogin, setShowLogin] = useState(false);
   
   return (
     <BrowserRouter>
       <StoreContextProvider>
+        {showlogin?<LoginPopup setShowLogin={setShowLogin} />:<></>}
         <div className="w-4/5 m-auto">
-          <Navbar />
+          <Navbar setShowLogin={setShowLogin} />
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/cart" element={<Cart />}/>

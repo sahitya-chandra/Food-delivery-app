@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { assets } from "../../assets/assets"
 
-export const Navbar = () => {
+export const Navbar = ({setShowLogin}) => {
 
     const [menu, setMenu] = useState("");
 
@@ -20,7 +20,7 @@ export const Navbar = () => {
                 <img src={assets.basket_icon} alt="" />
                 <div className="absolute min-w-[10px] min-h-[10px] bg-red-600 rounded-[10px] top-[12px] right-[255px]"></div>
             </div>
-            <button className="bg-transparent hover:bg-slate-200 text-base text-indigo-700 border-solid border-2 border-black py-px px-[20px] rounded-[20px] cursor-pointer">sign in</button>
+            <button onClick={()=>setShowLogin(true)} className="bg-transparent hover:bg-slate-200 text-base text-indigo-700 border-solid border-2 border-black py-px px-[20px] rounded-[20px] cursor-pointer">sign in</button>
         </div>
     </div>
     )

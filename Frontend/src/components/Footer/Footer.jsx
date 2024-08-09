@@ -1,8 +1,5 @@
 import { assets } from "../../assets/assets";
 
-
-
-
 export default function Footer() {
     return (
     <div className="text-white bg-black flex flex-col items-center gap-5 py-5 px-[8vw] pt-20">
