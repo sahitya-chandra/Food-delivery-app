@@ -11,7 +11,7 @@ export default function LoginPopup({setShowLogin}) {
         <form className="place-self-center w-custom-4 text-[#808080] bg-white flex flex-col gap-[25px] py-[25px] px-[30px] rounded-lg text-sm animate-fade">
             <div className="flex justify-between items-center text-black">
                 <h2>{currState}</h2>
-                <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" className="w-4 cursor-pointer"/>
+                <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} className="w-4 cursor-pointer"/>
             </div>
             <div className="flex flex-col gap-5 ">
                 {currState==="Login"?<></>:<input className="outline-none border-2 border-[#c9c9c9 border-solid p-2.5 rounded"  type="text" placeholder="Your Name" required />}
@@ -24,7 +24,6 @@ export default function LoginPopup({setShowLogin}) {
                 <p >By continuing, i agree to the terms of use & privacy policy.</p>
             </div>
             {currState==="Login"?<p>Create a new account?<span onClick={()=>(setCurrState("Sign Up"))} className="text-orange-500 font-medium cursor-pointer ">Click here</span></p>:<p>Already have an account? <span onClick={()=>(setCurrState("Login"))} className="text-orange-500 font-medium cursor-pointer ">Login here</span></p>}
-            
             
         </form>
     </div>
